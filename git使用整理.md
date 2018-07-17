@@ -17,3 +17,7 @@ $ git branch -a
 $ git checkout -b trunk origin/trunk
 ```
 切换到origin/trunk分支命令本地分支为"trunk"
+
+# git提交顺序
+
+一般先pull再commit最后push
