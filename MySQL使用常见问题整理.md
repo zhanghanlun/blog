@@ -9,7 +9,7 @@ INSERT INTO st (id,name,source,date) SELECT id,ifnull(name,''),source,ifnull(dat
 ```
 表st有四个字段
 | id | name | source | date |
-| --- | --- | --- | --- |
+| ---| --- | --- | --- |
 | not null | not null | not null | not null |
 
 表st1中的数据
