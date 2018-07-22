@@ -67,12 +67,13 @@ Mybatis是一个半自动框架。为我们在Java进行SQL操作中提供了POJ
     </select>
 ```
 在select元素中，我们常用的是id，resultType,resultMap。
+
 |参数| 解释|
 |---|---|
 |id|在命名空间中唯一的标识符，可以被用来引用这条语句。|
 |parameterType|将会传入这条语句的参数类的完全限定名或别名。（**可以是类，Map，单个参数**）这个属性是可选的，因为 MyBatis 可以通过 TypeHandler 推断出具体传入语句的参数，默认值为 unset。|
-|resultType|	从这条语句中返回的期望类型的类的完全限定名或别名。注意如果是集合情形，那应该是集合可以包含的类型，而不能是集合本身。使用 resultType 或 resultMap，但不能同时使用。
-|resultMap|	外部 resultMap 的命名引用。结果集的映射是 MyBatis 最强大的特性，对其有一个很好的理解的话，许多复杂映射的情形都能迎刃而解。使用 resultMap 或 resultType，但不能同时使用。
+|resultType|	从这条语句中返回的期望类型的类的完全限定名或别名。注意如果是集合情形，那应该是集合可以包含的类型，而不能是集合本身。使用 resultType 或 resultMap，但不能同时使用。|
+|resultMap|	外部 resultMap 的命名引用。结果集的映射是 MyBatis 最强大的特性，对其有一个很好的理解的话，许多复杂映射的情形都能迎刃而解。使用 resultMap 或 resultType，但不能同时使用。|
 
 ### insert元素
 Mybatis在执行insert操作后会返回一个整数，表示进行插入操作后插入的记录数。
@@ -82,6 +83,7 @@ Mybatis在执行insert操作后会返回一个整数，表示进行插入操作�
 </insert>
 ```
 其中重点讨论一下一个属性
+
 |属性|解释|
 | --- | --- |
 |useGeneratedKeys| 是否使用Mybatis的主键回填功能|
