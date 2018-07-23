@@ -62,7 +62,36 @@ Thu Jun 28 19:47:03 CST 2018
 ```java
 Thu Jun 28 19:58:46 CST 2018
 2018-06-28 19:58:46
-Thu Jun 28 19:55:42 CST 201
+Thu Jun 28 19:55:42 CST 2018
 ```
  
 # Calendar类
+```java
+	Date date = new Date();
+        Calendar calendar = Calendar.getInstance();
+        calendar.setTime(date);
+        System.out.println(new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(date));
+        //年
+        System.out.println(calendar.get(Calendar.YEAR));
+        //月
+        System.out.println(calendar.get(Calendar.MONTH));
+        //日
+        System.out.println(calendar.get(Calendar.DAY_OF_MONTH));
+        //时
+        System.out.println(calendar.get(Calendar.HOUR_OF_DAY));
+        //分
+        System.out.println(calendar.get(Calendar.MINUTE));
+        //秒
+        System.out.println(calendar.get(Calendar.SECOND));
+```
+
+结果输出为：
+```java
+2018-07-23 15:28:55
+2018
+6
+23
+15
+28
+55
+```
