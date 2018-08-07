@@ -72,7 +72,6 @@ public class XssRequestWrapper extends HttpServletRequestWrapper {
     }
     /**
      * 解析ApplicationJson数据，并且经过XSS过滤
-     * @Author 11084850
      * @throws IOException
      */
     private void parseJsonParameters() throws IOException {
