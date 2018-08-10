@@ -24,3 +24,38 @@ INSERT INTO st (id,name,source,date) SELECT id,ifnull(name,''),source,ifnull(dat
 | id | name | source | date |
 | --- | --- | --- | --- |
 | 1 | | 2 |2018-07-18 14:33:16 |
+
+
+# 创建表的SQL语句
+
+废话少说直接上SQL代码：
+
+```sql
+CREATE TABLE `t_topic_share` (
+	`id` BIGINT(20) NOT NULL AUTO_INCREMENT COMMENT '自增主键',
+	`topic_id` BIGINT(20) NOT NULL DEFAULT '0' COMMENT '主题帖ID',
+	`share_count` BIGINT(20) NOT NULL DEFAULT '0' COMMENT '主题帖分享次数',
+	`add_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '添加时间',
+	 `update_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
+	PRIMARY KEY (`id`),
+	UNIQUE INDEX `uk_topic_id` (`topic_id`)
+)
+COMMENT='主题帖分享表'
+COLLATE='utf8_general_ci'
+ENGINE=InnoDB
+;
+```
+
+关于创建表的部分主要代码包括：
+>* 字段名称（id，topic_id)
+>* 字段类型 BIGINT、datetime
+>* NOT NULL 
+>* 默认值 
+>* COMMENT 
+>* 索引
+
+**索引**
+索引的话包括三种：
+>* PRIMARY KEY 主键索引
+>* UNIQUE INDEX `uk_topic_id` (`topic_id`) 唯一值索引
+>* INDEX 索引
